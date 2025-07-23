@@ -12,12 +12,12 @@ export const themeConfig: ThemeConfig = {
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: false, // true, false
     // author name
-    author: 'lonely',
+    author: 'Lonely',
     // site url
     url: 'https://retypeset.radishzz.cc',
     // favicon url
     // recommended formats: svg, png or ico
-    favicon: '/icons/favicon.svg', // or https://example.com/favicon.svg
+    favicon: '/icons/webicon.svg', // or https://example.com/favicon.svg
   },
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
 
@@ -58,9 +58,9 @@ export const themeConfig: ThemeConfig = {
     locale: 'zh', // de, en, es, fr, ja, ko, pl, pt, ru, zh, zh-tw
     // more languages
     // not fill in the locale code above again, can be an empty array []
-    moreLocales: ['en','es','ru', 'ja', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
+    moreLocales: ['en','es','ja'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
     // font styles for post text
-    fontStyle: 'sans', // sans, serif
+    fontStyle: 'serif', // sans, serif
     // date format for posts
     dateFormat: 'YYYY-MM-DD', // YYYY-MM-DD, MM-DD-YYYY, DD-MM-YYYY, MONTH DAY YYYY, DAY MONTH YYYY
     // table of contents for posts
