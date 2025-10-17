@@ -10,6 +10,12 @@ const posts = defineCollection({
     published: z.date(),
     // optional
     description: z.string().optional().default(''),
+    abstract: z.string().max(500).optional().default(''),
+    cover: z.union([
+      z.string().url(),
+      z.string().startsWith('/'),
+      z.literal(''),
+    ]).optional().default(''),
     updated: z.preprocess(
       val => val === '' ? undefined : val,
       z.date().optional(),

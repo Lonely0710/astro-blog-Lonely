@@ -89,3 +89,19 @@ export function getPostDescription(
 
   return getExcerpt(htmlContent, lang, scene)
 }
+
+// Returns list abstract: prefer frontmatter `abstract` (max 50 chars),
+// fallback to existing list excerpt when empty
+export function getListAbstract(post: CollectionEntry<'posts'>): string {
+  const lang = post.data.lang || defaultLocale
+  const raw = (post.data.abstract ?? '').trim()
+  if (!raw)
+    return getExcerpt(markdownParser.render(post.body || ''), lang, 'list')
+
+  // Normalize whitespace
+  const text = raw.replace(/\s+/g, ' ')
+  const max = 50
+  if (text.length > max)
+    return `${text.slice(0, max).replace(/\p{P}+$/u, '')}...`
+  return text
+}

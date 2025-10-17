@@ -30,6 +30,8 @@ const content = `---
 title: ${baseName}
 published: ${new Date().toISOString()}
 description: ''
+abstract: ''
+cover: ''
 updated: ''
 tags:
   - Note
